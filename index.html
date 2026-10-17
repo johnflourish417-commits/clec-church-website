@@ -1,1 +1,374 @@
 index.html
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to CLEC Church. Join us for worship, prayer, fellowship, and the Word of God.">
+  <title>CLEC Church | Welcome Home</title>  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #263238;
+      background: #ffffff;
+    }
+
+    header {
+      background: #102b46;
+      color: white;
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #e8b44a;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #e8b44a;
+    }
+
+    .hero {
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 20px;
+      color: white;
+      background:
+        linear-gradient(rgba(7, 28, 47, 0.82), rgba(7, 28, 47, 0.82)),
+        url("https://images.unsplash.com/photo-1438032005730-c779502df39b?auto=format&fit=crop&w=1600&q=80")
+        center/cover no-repeat;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 7vw, 64px);
+      line-height: 1.15;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 span {
+      color: #e8b44a;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #e8b44a;
+      color: #102b46;
+      padding: 13px 25px;
+      margin: 5px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background: #ffffff;
+    }
+
+    .button-outline {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+    }
+
+    section {
+      padding: 70px 7%;
+      scroll-margin-top: 20px;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .section-heading h2 {
+      color: #102b46;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .section-heading p {
+      color: #667782;
+    }
+
+    .about {
+      text-align: center;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .about p {
+      font-size: 17px;
+      margin-bottom: 18px;
+    }
+
+    .services {
+      background: #f3f6f8;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      padding: 28px 22px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    }
+
+    .card .icon {
+      font-size: 38px;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      color: #102b46;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #667782;
+    }
+
+    .verse {
+      background: #102b46;
+      color: white;
+      text-align: center;
+    }
+
+    .verse blockquote {
+      max-width: 800px;
+      margin: auto;
+      font-size: clamp(22px, 4vw, 32px);
+      font-style: italic;
+    }
+
+    .verse p {
+      color: #e8b44a;
+      margin-top: 18px;
+      font-weight: bold;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact-details {
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .contact-details p {
+      margin: 12px 0;
+      font-size: 17px;
+    }
+
+    footer {
+      background: #091d30;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    footer p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        justify-content: center;
+        text-align: center;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .hero {
+        min-height: 450px;
+      }
+
+      section {
+        padding: 55px 6%;
+      }
+    }
+  </style></head><body>  <header>
+    <div class="logo">CLEC <span>CHURCH</span></div><nav>
+  <a href="#home">Home</a>
+  <a href="#about">About Us</a>
+  <a href="#services">Services</a>
+  <a href="#ministries">Ministries</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+  </header>  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1>Welcome to <span>CLEC Church</span></h1>    <p>
+      A place to worship God, grow in faith, discover your purpose,
+      and experience the love of Jesus Christ.
+    </p>
+
+    <a href="#about" class="button">Discover Our Church</a>
+    <a href="#contact" class="button button-outline">Plan Your Visit</a>
+  </div>
+</section>
+
+<section id="about">
+  <div class="section-heading">
+    <h2>Who We Are</h2>
+    <p>Growing together in faith, love, and the Word of God.</p>
+  </div>
+
+  <div class="about">
+    <p>
+      Welcome to CLEC Church! We are a Christian community committed
+      to worshipping God, sharing the Gospel of Jesus Christ, and
+      supporting one another through prayer, fellowship, and service.
+    </p>
+
+    <p>
+      Whether you are visiting church for the first time or looking
+      for a church family, you are welcome here. We look forward to
+      worshipping and growing together with you.
+    </p>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="section-heading">
+    <h2>Our Services</h2>
+    <p>Come and join us in the presence of God.</p>
+  </div>
+
+  <div class="card-container">
+    <div class="card">
+      <div class="icon">🙏</div>
+      <h3>Sunday Worship</h3>
+      <p>Join us for praise, worship, Bible teaching, and fellowship.</p>
+      <p><strong>Time:</strong> To be announced</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📖</div>
+      <h3>Bible Study</h3>
+      <p>Learn God's Word and grow in your understanding of Scripture.</p>
+      <p><strong>Time:</strong> To be announced</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🛐</div>
+      <h3>Prayer Meeting</h3>
+      <p>Come together in prayer, faith, and thanksgiving.</p>
+      <p><strong>Time:</strong> To be announced</p>
+    </div>
+  </div>
+</section>
+
+<section id="ministries">
+  <div class="section-heading">
+    <h2>Our Ministries</h2>
+    <p>There is a place for everyone to serve and grow.</p>
+  </div>
+
+  <div class="card-container">
+    <div class="card">
+      <div class="icon">🎵</div>
+      <h3>Choir & Worship</h3>
+      <p>Using music and praise to glorify God.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">👨‍👩‍👧‍👦</div>
+      <h3>Youth Ministry</h3>
+      <p>Helping young people grow in faith and purpose.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">❤️</div>
+      <h3>Outreach</h3>
+      <p>Sharing God's love and serving our community.</p>
+    </div>
+  </div>
+</section>
+
+<section class="verse">
+  <blockquote>
+    "For where two or three gather in my name, there am I with them."
+  </blockquote>
+  <p>Matthew 18:20</p>
+</section>
+
+<section class="contact" id="contact">
+  <div class="section-heading">
+    <h2>Contact Us</h2>
+    <p>We would love to hear from you!</p>
+  </div>
+
+  <div class="contact-details">
+    <p><strong>Church:</strong> CLEC Church</p>
+    <p><strong>Address:</strong> Add your church address here</p>
+    <p><strong>Phone:</strong> Add your church phone number here</p>
+    <p><strong>Email:</strong> Add your church email here</p>
+
+    <a href="#home" class="button">Back to Top</a>
+  </div>
+</section>
+
+  </main>  <footer>
+    <p>&copy; <span id="year"></span> CLEC Church. All rights reserved.</p>
+    <p>Worship God. Grow in Faith. Share His Love.</p>
+  </footer>  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script></body>
+</html>

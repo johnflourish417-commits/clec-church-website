@@ -1,5 +1,642 @@
 index.html
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Welcome to Christ Life Empowerment Center (CLEC), where lives are empowered and a godly army is raised.">
+
+  <meta name="theme-color" content="#102b22">
+
+  <title>Christ Life Empowerment Center (CLEC)</title>
+
+  <style>
+    :root {
+      --green: #102b22;
+      --gold: #d9ae54;
+      --cream: #fffaf0;
+      --white: #ffffff;
+      --text: #292929;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    header {
+      background: var(--green);
+      color: var(--white);
+      padding: 14px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand img {
+      width: 65px;
+      height: 65px;
+      object-fit: contain;
+      background: white;
+      border-radius: 50%;
+    }
+
+    .brand h1 {
+      font-size: 17px;
+      line-height: 1.4;
+    }
+
+    .brand span {
+      color: var(--gold);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    nav a {
+      color: white;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    .hero {
+      background: linear-gradient(
+        rgba(16, 43, 34, 0.88),
+        rgba(16, 43, 34, 0.88)
+      );
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero img {
+      width: 115px;
+      height: 115px;
+      object-fit: contain;
+      background: white;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .hero h2 {
+      font-size: clamp(28px, 5vw, 45px);
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto 25px;
+      font-size: 17px;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--green);
+      padding: 12px 24px;
+      border-radius: 5px;
+      font-weight: bold;
+      margin: 5px;
+    }
+
+    .button:hover {
+      opacity: 0.88;
+    }
+
+    section {
+      padding: 65px 7%;
+    }
+
+    .section-title {
+      color: var(--green);
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 25px;
+    }
+
+    .intro {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(220px, 1fr)
+      );
+      gap: 22px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.07);
+      border-bottom: 3px solid var(--gold);
+    }
+
+    .card h3 {
+      color: var(--green);
+      margin-bottom: 10px;
+    }
+
+    .services {
+      background: #f1eadb;
+    }
+
+    .contact-box {
+      max-width: 750px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    .contact-box p {
+      margin: 12px 0;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-box a {
+      color: #176548;
+      font-weight: bold;
+    }
+
+    .contact-form {
+      margin-top: 25px;
+    }
+
+    .contact-form label {
+      display: block;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font: inherit;
+    }
+
+    .contact-form button {
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 18px;
+    }
+
+    .note {
+      font-size: 13px;
+      color: #666;
+      margin-top: 12px;
+    }
+
+    footer {
+      background: var(--green);
+      color: white;
+      text-align: center;
+      padding: 28px 15px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    footer span {
+      color: var(--gold);
+    }
+
+    @media (max-width: 600px) {
+      header {
+        justify-content: center;
+      }
+
+      .brand {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .brand h1 {
+        font-size: 15px;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .hero {
+        padding: 65px 18px;
+      }
+
+      section {
+        padding: 45px 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="brand">
+      <img src="6483.png"
+           alt="Christ Life Empowerment Center logo">
+
+      <h1>
+        Christ Life Empowerment Center<br>
+        <span>(CLEC)</span>
+      </h1>
+    </div>
+
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#services">Services</a>
+      <a href="#media">Media</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HOME -->
+  <main>
+    <section class="hero" id="home">
+
+      <img src="6483.png"
+           alt="CLEC Church logo">
+
+      <h2>Welcome to Christ Life Empowerment Center</h2>
+
+      <p>
+        Where lives are empowered and a godly army is raised.
+        Join us to worship, learn, grow, and experience the
+        presence, love, and transforming power of God.
+      </p>
+
+      <a href="#about" class="button">Discover CLEC</a>
+      <a href="#contact" class="button">Contact Us</a>
+
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+
+      <h2 class="section-title">About Our Church</h2>
+
+      <div class="intro">
+        <p>
+          Christ Life Empowerment Center is committed to
+          empowering people and raising a godly army.
+          Under the leadership of Pastor Paul D. John,
+          we seek to raise people of impact in every sphere
+          of life and equip them with a spirit of excellence
+          through teaching, preaching, and the demonstration
+          of God's power.
+        </p>
+      </div>
+
+      <div class="cards">
+
+        <article class="card">
+          <h3>Our Vision</h3>
+          <p>
+            To empower lives and raise a godly army that
+            makes a positive impact in every sphere of life.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Our Mission</h3>
+          <p>
+            To teach God's Word, strengthen faith, encourage
+            spiritual growth, and equip people to live
+            purposefully.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Our Community</h3>
+          <p>
+            A place for worship, prayer, fellowship,
+            spiritual growth, and the love of God.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+
+      <h2 class="section-title">Join Us for Worship</h2>
+
+      <div class="cards">
+
+        <article class="card">
+          <h3>Sunday Service</h3>
+          <p>Time: 4:00 p.m.</p>
+        </article>
+
+        <article class="card">
+          <h3>Bible Study</h3>
+          <p>Time: 5:00 p.m.</p>
+          <p>Please confirm the meeting day.</p>
+        </article>
+
+        <article class="card">
+          <h3>Prayer Meeting</h3>
+          <p>Time: 8:00 p.m.</p>
+          <p>Please confirm the meeting day.</p>
+        </article>
+
+        <article class="card">
+          <h3>Other Programs</h3>
+          <p>Time: 4:00 p.m.</p>
+          <p>Details of individual programs will be announced.</p>
+        </article>
+
+      </div>
+
+      <div class="intro" style="margin-top:30px;">
+        <p>
+          Come as you are and fellowship with us.
+          We look forward to welcoming you!
+        </p>
+      </div>
+
+    </section>
+
+    <!-- LOCATION -->
+    <section id="location">
+
+      <h2 class="section-title">Find Our Church</h2>
+
+      <div class="intro">
+        <p><strong>Christ Life Empowerment Center</strong></p>
+        <p>Sabo, Chikun Local Government Area</p>
+        <p>Kaduna State, Nigeria</p>
+
+        <p style="margin-top:20px;">
+          <a
+            class="button"
+            href="https://www.google.com/maps/search/?api=1&query=Sabo%2C+Chikun%2C+Kaduna%2C+Nigeria"
+            target="_blank"
+            rel="noopener noreferrer">
+            Find Us on Google Maps
+          </a>
+        </p>
+      </div>
+
+    </section>
+
+    <!-- MEDIA -->
+    <section class="services" id="media">
+
+      <h2 class="section-title">Explore Our Media</h2>
+
+      <div class="cards">
+
+        <article class="card">
+          <h3>Photo Gallery</h3>
+          <p>
+            Explore photos from worship services,
+            special programs, outreaches, and church events.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Video Gallery</h3>
+          <p>
+            Watch worship sessions, testimonies,
+            teachings, and church programs.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Sermon Library</h3>
+          <p>
+            Grow in faith through Bible teachings
+            and messages from the Word of God.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Church Events</h3>
+          <p>
+            Stay informed about conferences,
+            prayer meetings, Bible studies,
+            and special programs.
+          </p>
+        </article>
+
+      </div>
+
+      <p class="intro" style="margin-top:25px;">
+        Photos, videos, and sermons can be added
+        as the church's media files become available.
+      </p>
+
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+
+      <h2 class="section-title">Contact Us</h2>
+
+      <div class="contact-box">
+
+        <p>
+          <strong>Phone 1:</strong>
+          <a href="tel:09134424425">09134424425</a>
+        </p>
+
+        <p>
+          <strong>Phone 2:</strong>
+          <a href="tel:09091210571">09091210571</a>
+        </p>
+
+        <p>
+          <strong>WhatsApp:</strong>
+          <a
+            href="https://wa.me/2349091210571"
+            target="_blank"
+            rel="noopener noreferrer">
+            Chat with CLEC on WhatsApp
+          </a>
+        </p>
+
+        <p>
+          <strong>Facebook:</strong>
+          CHRIST-LIFE Ministrys
+        </p>
+
+        <p>
+          <strong>Email:</strong>
+          Email address to be added.
+        </p>
+
+        <h3 style="margin-top:30px;color:#102b22;">
+          Send Us a Message
+        </h3>
+
+        <form class="contact-form"
+              id="contactForm">
+
+          <label for="name">Full Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required>
+
+          <label for="email">Your Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required>
+
+          <label for="phone">Phone Number</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone">
+
+          <label for="subject">Subject</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            required>
+
+          <label for="message">Message or Prayer Request</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required></textarea>
+
+          <button type="submit" class="button">
+            Send Message via WhatsApp
+          </button>
+
+          <p class="note">
+            Your message will open in WhatsApp so you can
+            review and send it. This form does not store
+            messages or send emails automatically.
+          </p>
+
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      <strong>Christ Life Empowerment Center (CLEC)</strong>
+    </p>
+
+    <p>
+      Empowering lives and raising a godly army.
+    </p>
+
+    <p>
+      Sabo, Chikun LGA, Kaduna State, Nigeria.
+    </p>
+
+    <p>
+      &copy; <span id="year"></span>
+      Christ Life Empowerment Center. All rights reserved.
+    </p>
+  </footer>
+
+  <script>
+    // Automatically update the copyright year.
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    // Open the visitor's message in WhatsApp.
+    document.getElementById("contactForm")
+      .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const name =
+          document.getElementById("name").value.trim();
+
+        const email =
+          document.getElementById("email").value.trim();
+
+        const phone =
+          document.getElementById("phone").value.trim();
+
+        const subject =
+          document.getElementById("subject").value.trim();
+
+        const message =
+          document.getElementById("message").value.trim();
+
+        const text =
+          "CLEC Website Message\n\n" +
+          "Name: " + name + "\n" +
+          "Email: " + email + "\n" +
+          "Phone: " + phone + "\n" +
+          "Subject: " + subject + "\n\n" +
+          "Message: " + message;
+
+        const whatsappNumber = "2349091210571";
+
+        const whatsappURL =
+          "https://wa.me/" + whatsappNumber +
+          "?text=" + encodeURIComponent(text);
+
+        window.open(whatsappURL, "_blank");
+      });
+  </script>
+
+</body>
+  </html><!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
